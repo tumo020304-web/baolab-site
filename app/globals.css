@@ -71,3 +71,242 @@ nav a:hover {
   font-size: 14px;
   color: rgba(255,255,255,0.6);
 }
+
+/* ===== Denza-style minimal refinements ===== */
+
+:root {
+  --bg: #0b0b0b;
+  --panel: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.10);
+  --border-soft: rgba(255, 255, 255, 0.07);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.62);
+  --muted2: rgba(255, 255, 255, 0.48);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Header polish */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgba(11, 11, 11, 0.75);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 18px 0;
+}
+
+.logo {
+  letter-spacing: 0.6em;
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 0.95;
+}
+
+nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.65)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+
+/* Sections */
+.section {
+  padding: 90px 0;
+}
+
+.section h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Buttons */
+.primary-btn, .secondary-btn, button.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  transition: 0.18s ease;
+}
+
+.primary-btn, button.primary-btn {
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.primary-btn:hover, button.primary-btn:hover {
+  transform: translateY(-1px);
+  background: #f2f2f2;
+}
+
+.secondary-btn {
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.22);
+}
+
+/* Grid systems */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 56px;
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pillars */
+.pillar {
+  padding: 26px 26px 28px;
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background: var(--panel);
+}
+
+.pillar h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.pillar p {
+  color: var(--muted2);
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+/* Cards (use-case) */
+.card {
+  padding: 26px;
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  background: var(--panel);
+  transition: 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.card p {
+  color: var(--muted2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Email input (if you add it later) */
+.email-input {
+  height: 44px;
+  width: 320px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-soft);
+  color: var(--text);
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 44px 0;
+  margin-top: 60px;
+  font-size: 13px;
+  color: var(--muted);
+}
