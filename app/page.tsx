@@ -1,134 +1,215 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
 export default function Home() {
+  const vehicles = useMemo(
+  () => [
+    {
+      key: "b5",
+      note: "Premium Off-Road SUV",
+      image: "/images/vehicles/b5.png",
+      logo: "/images/vehicle-logos/b5.png",
+    },
+    {
+      key: "b8",
+      note: "Full-Size Adventure SUV",
+      image: "/images/vehicles/b8.png",
+      logo: "/images/vehicle-logos/b8.png",
+    },
+    {
+      key: "d9",
+      note: "Luxury Electric MPV",
+      image: "/images/vehicles/d9.png",
+      logo: "/images/vehicle-logos/d9.png",
+    },
+    {
+      key: "z9gt",
+      note: "Performance Grand Tourer",
+      image: "/images/vehicles/z9gt.png",
+      logo: "/images/vehicle-logos/z9gt.png",
+    },
+    {
+      key: "n7",
+      note: "Premium Electric SUV",
+      image: "/images/vehicles/n7.png",
+      logo: "/images/vehicle-logos/n7.png",
+    },
+  ],
+  []
+);
+
+
+  const [selected, setSelected] = useState("b5");
+  const selectedVehicle = vehicles.find((v) => v.key === selected);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    let ticking = false;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(currentY);
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const heroImageTransform = `translateY(${scrollY * 0.24}px) scale(${1 + Math.min(scrollY * 0.00012, 0.1)})`;
+const heroContentTransform = `translateY(${scrollY * -0.12}px)`;
+const heroContentOpacity = Math.max(1 - scrollY / 400, 0.1);
+  const heroOverlayOpacity = Math.min(0.55 + scrollY / 1400, 0.78);
+
   return (
     <div>
-
-      {/* HERO */}
+            {/* HERO */}
       <section className="hero">
+        <div
+          className="hero-image"
+          style={{
+            transform: heroImageTransform,
+          }}
+        >
+          <img src="/images/hero.jpg" alt="Denza vehicle" />
+          <div
+            className="hero-overlay"
+            style={{ opacity: heroOverlayOpacity }}
+          ></div>
+        </div>
 
-  <div className="hero-image">
-    <img src="/images/hero.jpg" alt="Denza vehicle" />
-    <div className="hero-overlay"></div>
-  </div>
+        <div
+          className="hero-content container"
+          style={{
+            transform: heroContentTransform,
+            opacity: heroContentOpacity,
+          }}
+        >
+          <h1>
+            Premium Accessories <br /> for Denza Owners
+          </h1>
 
-  <div className="hero-content container">
-    <h1>
-      Premium Accessories <br /> for Denza Owners
-    </h1>
+          <p>
+            From daily essentials to overland builds, Baolab curates OEM-fit
+            accessories engineered for modern electric mobility.
+          </p>
 
-    <p>
-      From daily essentials to overland builds,
-      Baolab curates OEM-fit accessories engineered
-      for modern electric mobility.
-    </p>
+          <div style={{ marginTop: 40 }}>
+            <a className="primary-btn" href="/products">
+              Explore Accessories
+            </a>
 
-    <div style={{ marginTop: 40 }}>
-      <a className="primary-btn" href="/products">
-        Explore Accessories
-      </a>
-
-      <a
-        className="secondary-btn"
-        href="/compatibility"
-        style={{ marginLeft: 20 }}
-      >
-        View Compatibility
-      </a>
-    </div>
-  </div>
-
-</section>
-
-
-
-      {/* THREE PILLARS */}
-      <section className="section container">
-        <div className="grid-3">
-
-          <div className="pillar">
-            <h3>Premium Essentials</h3>
-            <p>
-              Custom-fit floor mats, trim overlays, protection kits,
-              and practical upgrades designed for everyday use.
-            </p>
+            <a
+              className="secondary-btn"
+              href="/compatibility"
+              style={{ marginLeft: 20 }}
+            >
+              View Compatibility
+            </a>
           </div>
-
-          <div className="pillar">
-            <h3>Expedition Accessories</h3>
-            <p>
-              Roof platforms, storage builds, camping integrations
-              and road-trip equipment built for Australian terrain.
-            </p>
-          </div>
-
-          <div className="pillar">
-            <h3>Advanced Retrofits</h3>
-            <p>
-              China-spec integrations including dashcam systems,
-              V2L upgrades, lighting and display enhancements.
-            </p>
-          </div>
-
         </div>
       </section>
 
-      {/* USE CASE SECTION */}
+      {/* VEHICLE PICKER */}
       <section className="section container">
-        <h2>Built for Every Driving Scenario</h2>
+        <div className="section-head">
+          <h2>Select your vehicle</h2>
+          <p>{selectedVehicle?.note || "Browse accessories curated for each Denza model."}</p>
+        </div>
 
-        <div className="grid-3" style={{ marginTop: 60 }}>
+        <div className="vehicle-grid">
+  {vehicles.map((v) => {
+    const active = v.key === selected;
 
-          <div className="card">
-            <h3>Urban Daily</h3>
-            <p>Protection, storage, and comfort upgrades.</p>
-          </div>
+    return (
+      <button
+  key={v.key}
+  className={`vehicle-card ${active ? "active" : ""}`}
+  onClick={() => setSelected(v.key)}
+  onMouseMove={(e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-          <div className="card">
-            <h3>Weekend Roadtrip</h3>
-            <p>Roof systems, lighting and modular storage.</p>
-          </div>
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
 
-          <div className="card">
-            <h3>Full Overland Build</h3>
-            <p>Recovery gear, camping systems and structural upgrades.</p>
-          </div>
+    const moveX = (x - centerX) / 18;
+    const moveY = (y - centerY) / 18;
 
+    card.style.setProperty("--mx", `${moveX}px`);
+    card.style.setProperty("--my", `${moveY}px`);
+  }}
+  onMouseLeave={(e) => {
+    const card = e.currentTarget;
+    card.style.setProperty("--mx", `0px`);
+    card.style.setProperty("--my", `0px`);
+  }}
+  type="button"
+>
+  <div className="vehicle-image">
+    <div className="vehicle-logo">
+      <img src={v.logo} alt={v.key} />
+    </div>
+
+    <img className="vehicle-car" src={v.image} alt={v.key} />
+
+    <div className="vehicle-desc">{v.note}</div>
+  </div>
+</button>
+    );
+  })}
+</div>
+
+        <div style={{ marginTop: 22 }}>
+          <a className="secondary-btn" href={`/products?vehicle=${selected}`}>
+            Browse compatible accessories
+          </a>
         </div>
       </section>
 
-
+      {/* PILLARS */}
       <section className="section container">
-  <h2>Why Baolab</h2>
+        <div className="pillar-grid">
+          <div className="pillar-card">
+            <img src="/images/premium.jpg" alt="Premium accessories" />
+            <h3>Premium Accessories</h3>
+            <p>
+              High-quality upgrades that improve daily comfort and interior
+              finish.
+            </p>
+          </div>
 
-  <div className="grid-3" style={{ marginTop: 50 }}>
+          <div className="pillar-card">
+            <img src="/images/camping.jpg" alt="Travel and camping" />
+            <h3>Travel &amp; Camping</h3>
+            <p>
+              Roof platforms, storage solutions and gear built for road trips
+              and outdoor use.
+            </p>
+          </div>
 
-    <div>
-      <h3 style={{ marginBottom: 10 }}>Curated Quality</h3>
-      <p style={{ color: "rgba(255,255,255,0.6)" }}>
-        No low-grade marketplace products. Every accessory is
-        selected for fit, durability and integration.
-      </p>
-    </div>
-
-    <div>
-      <h3 style={{ marginBottom: 10 }}>Model-Specific Fit</h3>
-      <p style={{ color: "rgba(255,255,255,0.6)" }}>
-        Designed specifically for Denza B5 & B8 platforms,
-        not universal compromises.
-      </p>
-    </div>
-
-    <div>
-      <h3 style={{ marginBottom: 10 }}>Australian Focused</h3>
-      <p style={{ color: "rgba(255,255,255,0.6)" }}>
-        Built around Australian driving conditions,
-        road trips and outdoor lifestyle.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
+          <div className="pillar-card">
+            <img src="/images/retrofit.jpg" alt="Advanced retrofits" />
+            <h3>Retrofits</h3>
+            <p>
+              Bring back selected China-spec features such as dashcams and
+              internal V2L.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

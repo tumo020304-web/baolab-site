@@ -1,3 +1,7 @@
+/* ========================================
+BASE RESET
+======================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,84 +14,28 @@ html, body {
   color: #ffffff;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+html {
+  scroll-behavior: smooth;
 }
 
-.header {
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 20px 0;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  letter-spacing: 0.6em;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-nav a {
-  margin-left: 28px;
-  text-decoration: none;
-  color: rgba(255,255,255,0.7);
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: white;
-}
-
-.hero {
-  padding: 140px 0 100px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-weight: 600;
-  margin-bottom: 24px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: rgba(255,255,255,0.6);
-  max-width: 600px;
-}
-
-.section {
-  padding: 100px 0;
-}
-
-.footer {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 40px 0;
-  margin-top: 80px;
-  font-size: 14px;
-  color: rgba(255,255,255,0.6);
-}
-
-/* ===== Denza-style minimal refinements ===== */
+/* ========================================
+GLOBAL VARIABLES
+======================================== */
 
 :root {
   --bg: #0b0b0b;
-  --panel: rgba(255, 255, 255, 0.03);
-  --border: rgba(255, 255, 255, 0.10);
-  --border-soft: rgba(255, 255, 255, 0.07);
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.62);
-  --muted2: rgba(255, 255, 255, 0.48);
+  --panel: rgba(255,255,255,0.03);
+  --border-soft: rgba(255,255,255,0.07);
+  --border: rgba(255,255,255,0.10);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.62);
+  --muted2: rgba(255,255,255,0.48);
 }
 
-html, body {
-  background: var(--bg);
-  color: var(--text);
-}
+
+/* ========================================
+LAYOUT
+======================================== */
 
 .container {
   max-width: 1160px;
@@ -95,15 +43,43 @@ html, body {
   padding: 0 28px;
 }
 
-/* Header polish */
+.section {
+  padding: 90px 0;
+}
+
+.section h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.section-head p {
+  margin-top: 14px;
+  color: rgba(255,255,255,0.55);
+  max-width: 720px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+
+/* ========================================
+HEADER
+======================================== */
+
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
   backdrop-filter: blur(14px);
-  background: rgba(11, 11, 11, 0.75);
+  background: rgba(11,11,11,0.75);
   border-bottom: 1px solid var(--border-soft);
   padding: 18px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -118,18 +94,22 @@ nav a {
   text-decoration: none;
   color: var(--muted);
   font-size: 13px;
-  letter-spacing: 0.02em;
 }
 
 nav a:hover {
   color: var(--text);
 }
 
-/* Hero */
+
+/* ========================================
+HERO SECTION
+======================================== */
+
 .hero {
   position: relative;
-  height: 90vh;
-  min-height: 680px;
+  height: 100vh;
+  width: 100%;
+  min-height: 720px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -137,13 +117,15 @@ nav a:hover {
 
 .hero-image {
   position: absolute;
-  inset: 0;
+  inset: -4% 0 0 0;
   z-index: 0;
+  will-change: transform;
+  transition: transform 0.08s linear;
 }
 
 .hero-image img {
   width: 100%;
-  height: 100%;
+  height: 110%;
   object-fit: cover;
 }
 
@@ -152,15 +134,18 @@ nav a:hover {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.65)
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.62)
   );
+  pointer-events: none;
+  transition: opacity 0.15s linear;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   max-width: 700px;
+  will-change: transform, opacity;
 }
 
 .hero h1 {
@@ -175,21 +160,16 @@ nav a:hover {
   font-size: 18px;
   color: rgba(255,255,255,0.75);
   line-height: 1.7;
+  max-width: 620px;
 }
 
-/* Sections */
-.section {
-  padding: 90px 0;
-}
 
-.section h2 {
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
+/* ========================================
+BUTTONS
+======================================== */
 
-/* Buttons */
-.primary-btn, .secondary-btn, button.primary-btn {
+.primary-btn,
+.secondary-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -201,14 +181,13 @@ nav a:hover {
   transition: 0.18s ease;
 }
 
-.primary-btn, button.primary-btn {
+.primary-btn {
   background: #ffffff;
-  color: #000000;
+  color: #000;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.primary-btn:hover, button.primary-btn:hover {
+.primary-btn:hover {
   transform: translateY(-1px);
   background: #f2f2f2;
 }
@@ -217,7 +196,6 @@ nav a:hover {
   border: 1px solid var(--border);
   color: var(--text);
   text-decoration: none;
-  background: transparent;
 }
 
 .secondary-btn:hover {
@@ -225,88 +203,426 @@ nav a:hover {
   border-color: rgba(255,255,255,0.22);
 }
 
-/* Grid systems */
-.grid-3 {
+
+/* ========================================
+VEHICLE SELECTOR GRID
+======================================== */
+
+.vehicle-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  margin-top: 56px;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 28px;
+  margin-top: 36px;
 }
 
 @media (max-width: 900px) {
-  .grid-3 {
+  .vehicle-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* Pillars */
-.pillar {
-  padding: 26px 26px 28px;
-  border: 1px solid var(--border-soft);
-  border-radius: 18px;
-  background: var(--panel);
+.vehicle-grid:hover .vehicle-card {
+  opacity: 0.6;
 }
 
-.pillar h3 {
-  margin-bottom: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+.vehicle-grid:hover .vehicle-card:hover {
+  opacity: 1;
 }
 
-.pillar p {
-  color: var(--muted2);
-  line-height: 1.65;
-  font-size: 14px;
+
+/* ========================================
+VEHICLE CARD
+======================================== */
+
+.vehicle-card {
+  border-radius: 24px;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.3s ease;
 }
 
-/* Cards (use-case) */
-.card {
-  padding: 26px;
-  border: 1px solid var(--border-soft);
-  border-radius: 18px;
-  background: var(--panel);
-  transition: 0.18s ease;
+.vehicle-card:hover {
+  transform: translateY(-10px);
+}
+.vehicle-card.active {
+  transform: translateY(-4px);
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255,255,255,0.16);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.card p {
-  color: var(--muted2);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* Email input (if you add it later) */
-.email-input {
-  height: 44px;
-  width: 320px;
-  padding: 0 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border-soft);
-  color: var(--text);
+.vehicle-card {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
   outline: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.3s ease;
 }
 
-.email-input::placeholder {
-  color: rgba(255,255,255,0.35);
+.vehicle-card:focus,
+.vehicle-card:focus-visible,
+.vehicle-card:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
 
-/* Footer */
-.footer {
-  border-top: 1px solid var(--border-soft);
-  padding: 44px 0;
-  margin-top: 60px;
+.vehicle-card::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.vehicle-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:radial-gradient(circle at 50% 40%,rgba(255,255,255,0.06),transparent 60%);
+opacity:0;
+transition:opacity .35s ease;
+pointer-events:none;
+}
+
+.vehicle-card:hover::before{
+opacity:1;
+}
+
+/* ========================================
+VEHICLE IMAGE AREA
+======================================== */
+
+.vehicle-image {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vehicle-car {
+  width: 90%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.42s cubic-bezier(0.22,1,0.36,1);
+}
+
+.vehicle-card:hover .vehicle-logo {
+  transform: translateX(-50%) translateY(-6px) scale(1.5);
+}
+
+.vehicle-card.active .vehicle-logo {
+  transform: translateX(-50%) translateY(-3px) scale(1.12);
+}
+
+.vehicle-card.active:hover .vehicle-logo {
+  transform: translateX(-50%) translateY(-6px) scale(1.5);
+}
+
+.vehicle-image::after {
+  content: "";
+  position: absolute;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 24px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255,255,255,0.08),
+    transparent 70%
+  );
+  filter: blur(12px);
+}
+
+/* ========================================
+VEHICLE LOGO
+======================================== */
+
+.vehicle-logo {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  z-index: 2;
+
+  transition:
+    transform 0.42s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.28s ease;
+}
+
+.vehicle-card:hover .vehicle-car {
+  transform: translateY(-8px) scale(1.08);
+}
+
+.vehicle-card.active .vehicle-car {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.vehicle-card.active:hover .vehicle-car {
+  transform: translateY(-8px) scale(1.08);
+}
+
+.vehicle-logo img {
+  max-width: 220px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  opacity: 0.95;
+}
+
+.vehicle-logo img{
+opacity:0.9;
+transition:transform .42s cubic-bezier(.22,1,.36,1),opacity .25s ease;
+}
+
+.vehicle-card:hover .vehicle-logo img{
+opacity:1;
+}
+
+
+/* ========================================
+MAGNET MOVEMENT
+======================================== */
+.vehicle-card {
+  --mx: 0px;
+  --my: 0px;
+
+  border-radius: 24px;
+  background: rgba(255,255,255,0.02);
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.35s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.3s ease,
+    background 0.35s cubic-bezier(0.22,1,0.36,1);
+  box-shadow: none;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.05);
+}
+
+.vehicle-card.active {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.06);
+}
+
+.vehicle-image {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vehicle-logo {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) translate(var(--mx), calc(var(--my) * 0.6)) scale(1);
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+
+.vehicle-logo img {
+  max-width: 220px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  opacity: 0.95;
+}
+
+.vehicle-card:hover .vehicle-logo {
+  transform: translateX(-50%) translate(calc(var(--mx) * 1.1), calc(var(--my) * 0.7 - 6px)) scale(1.5);
+}
+
+.vehicle-card.active .vehicle-logo {
+  transform: translateX(-50%) translate(calc(var(--mx) * 0.7), calc(var(--my) * 0.45 - 3px)) scale(1.12);
+}
+
+.vehicle-card.active:hover .vehicle-logo {
+  transform: translateX(-50%) translate(calc(var(--mx) * 1.1), calc(var(--my) * 0.7 - 6px)) scale(1.5);
+}
+
+.vehicle-car {
+  width: 90%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.42s cubic-bezier(0.22,1,0.36,1);
+  transform: translate(var(--mx), var(--my)) scale(1);
+}
+
+.vehicle-card:hover .vehicle-car {
+  transform: translate(calc(var(--mx) * 1.2), calc(var(--my) * 1.2 - 8px)) scale(1.08);
+}
+
+.vehicle-card.active .vehicle-car {
+  transform: translate(calc(var(--mx) * 0.8), calc(var(--my) * 0.8 - 4px)) scale(1.03);
+}
+
+.vehicle-card.active:hover .vehicle-car {
+  transform: translate(calc(var(--mx) * 1.2), calc(var(--my) * 1.2 - 8px)) scale(1.08);
+}
+
+.vehicle-desc {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  right: 22px;
   font-size: 13px;
-  color: var(--muted);
+  color: rgba(255,255,255,0.72);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), color 0.25s ease;
+  transform: translate(calc(var(--mx) * 0.35), calc(var(--my) * 0.2));
 }
+
+.vehicle-card:hover .vehicle-desc {
+  color: rgba(255,255,255,0.9);
+}
+
+
+/* ========================================
+VEHICLE DESCRIPTION
+======================================== */
+
+.vehicle-desc {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  right: 22px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+}
+
+
+/* ========================================
+PILLARS
+======================================== */
+
+.pillar-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  margin-top:50px;
+}
+
+@media (max-width:900px){
+  .pillar-grid {
+    grid-template-columns:1fr;
+  }
+}
+
+.pillar-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  overflow:hidden;
+  transition:0.25s;
+  cursor:pointer;
+}
+
+.pillar-card:hover {
+  transform:translateY(-6px);
+  border-color:rgba(255,255,255,0.18);
+}
+
+.pillar-card img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.pillar-card h3 {
+  font-size:18px;
+  margin:20px 20px 10px;
+}
+
+.pillar-card p {
+  margin:0 20px 24px;
+  color:rgba(255,255,255,0.6);
+  font-size:14px;
+}
+
+
+/* ========================================
+FOOTER
+======================================== */
+
+.footer {
+  border-top:1px solid var(--border-soft);
+  padding:44px 0;
+  margin-top:60px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media (max-width:1200px){
+
+  .vehicle-image{
+    height:340px;
+  }
+
+}
+
+@media (max-width:900px){
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .vehicle-image{
+    height:300px;
+  }
+
+  .vehicle-logo img{
+    max-width:160px;
+    max-height:30px;
+  }
+
+}
+
+@media (max-width:640px){
+
+  .vehicle-image{
+    height:260px;
+  }
+
+  .vehicle-logo img{
+    max-width:140px;
+    max-height:28px;
+  }
+
+  .vehicle-desc{
+    bottom:16px;
+    left:18px;
+    right:18px;
+    font-size:12px;
+  }
+
+}
+
