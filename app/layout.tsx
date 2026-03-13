@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Header from "./Header";
 
 export const metadata: Metadata = {
   title: "BAOLAB - Denza B5 & B8 Accessories",
@@ -15,24 +16,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="header">
-          <div className="container nav">
-            <div className="logo">BAOLAB</div>
-            <nav>
-              <a href="/">Home</a>
-              <a href="/products">Products</a>
-              <a href="/compatibility">Compatibility</a>
-              <a href="/shipping">Shipping</a>
-              <a href="/contact">Contact</a>
-            </nav>
-          </div>
-        </header>
+        <Header />
 
         <main>{children}</main>
 
         <footer className="footer">
-          <div className="container">
-            © {new Date().getFullYear()} BAOLAB · Australia
+          <div className="container footer-inner">
+            <div className="footer-brand">
+              <div className="logo">BAOLAB</div>
+              <p className="footer-desc">
+                Premium accessories designed for Denza owners across Australia.
+              </p>
+            </div>
+
+            <div className="footer-disclaimer">
+              <p>
+                Baolab is an independent aftermarket accessories retailer and is
+                not affiliated with, endorsed by, or associated with Denza, BYD,
+                or any of their subsidiaries. All trademarks and vehicle names
+                are the property of their respective owners and are used for
+                compatibility reference only.
+              </p>
+            </div>
           </div>
         </footer>
       </body>
