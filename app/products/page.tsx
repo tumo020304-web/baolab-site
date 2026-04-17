@@ -132,8 +132,32 @@ export default function ProductsPage() {
     return vehicleMatch && categoryMatch;
   });
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "BaoLab Denza Accessories",
+    description: "Premium aftermarket accessories for Denza B5, B8, D9, Z9 GT, and N7",
+    numberOfItems: products.length,
+    itemListElement: products.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Product",
+        name: p.name,
+        description: p.note,
+        url: p.href,
+        brand: { "@type": "Brand", name: "BaoLab" },
+        category: p.category,
+      },
+    })),
+  };
+
   return (
     <div className="products-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="section container">
         <div className="section-head">
           <h1 className="products-title">Accessories</h1>
