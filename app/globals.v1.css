@@ -1,0 +1,833 @@
+/* ========================================
+BASE RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+
+/* ========================================
+GLOBAL VARIABLES
+======================================== */
+
+:root {
+  --bg: #0b0b0b;
+  --panel: rgba(255,255,255,0.03);
+  --border-soft: rgba(255,255,255,0.07);
+  --border: rgba(255,255,255,0.10);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.62);
+  --muted2: rgba(255,255,255,0.48);
+}
+
+
+/* ========================================
+LAYOUT
+======================================== */
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.section-head p {
+  margin-top: 14px;
+  color: rgba(255,255,255,0.55);
+  max-width: 720px;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+
+/* ========================================
+HEADER
+======================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgba(11,11,11,0.75);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 18px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  letter-spacing: 0.6em;
+  font-weight: 500;
+  font-size: 15px;
+  opacity: 0.95;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.logo {
+  letter-spacing: 0.6em;
+  font-weight: 500;
+  font-size: 15px;
+  opacity: 0.95;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.logo {
+  letter-spacing: 0.6em;
+  font-weight: 500;
+  font-size: 15px;
+  opacity: 0.95;
+  text-decoration: none;
+  color: var(--text);
+  display: inline-block;
+  transition:
+    transform 0.28s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.25s ease;
+}
+
+.logo:hover {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgba(11,11,11,0.45);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 18px 0;
+  transition:
+    background 0.35s cubic-bezier(0.22,1,0.36,1),
+    border-color 0.35s cubic-bezier(0.22,1,0.36,1),
+    backdrop-filter 0.35s cubic-bezier(0.22,1,0.36,1),
+    box-shadow 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+
+.header-scrolled {
+  background: rgba(11,11,11,0.78);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* ========================================
+NAV HOVER EFFECT (Porsche style)
+======================================== */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13px;
+  position: relative;
+  transition:
+    color 0.25s ease,
+    transform 0.25s cubic-bezier(0.22,1,0.36,1);
+  z-index: 1;
+}
+
+.main-nav a:hover {
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+/* soft glow background */
+
+.main-nav a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255,255,255,0.09),
+    rgba(255,255,255,0.03) 55%,
+    transparent 75%
+  );
+  filter: blur(10px);
+  opacity: 0;
+  transition:
+    width 0.35s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.main-nav a:hover::before {
+  width: 120%;
+  opacity: 1;
+}
+
+/* animated underline */
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.9),
+    transparent
+  );
+  transform: translateX(-50%);
+  transition: width 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+
+.main-nav a:hover::after {
+  width: 110%;
+}
+
+
+/* ========================================
+HERO SECTION
+======================================== */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  inset: -4% 0 0 0;
+  z-index: 0;
+  will-change: transform;
+  transition: transform 0.08s linear;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.62)
+  );
+  pointer-events: none;
+  transition: opacity 0.15s linear;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  will-change: transform, opacity;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+
+/* ========================================
+BUTTONS
+======================================== */
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  transition: 0.18s ease;
+}
+
+.primary-btn {
+  background: #ffffff;
+  color: #000;
+  text-decoration: none;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  background: #f2f2f2;
+}
+
+.secondary-btn {
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.22);
+}
+
+
+/* ========================================
+VEHICLE SELECTOR GRID
+======================================== */
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 28px;
+  margin-top: 36px;
+}
+
+
+/* ========================================
+VEHICLE CARD
+======================================== */
+
+.vehicle-card {
+  --mx: 0px;
+  --my: 0px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.02);
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.3s ease,
+    background 0.35s cubic-bezier(0.22,1,0.36,1),
+    filter 0.3s ease;
+}
+
+.vehicle-card:focus,
+.vehicle-card:focus-visible,
+.vehicle-card:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.vehicle-card::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.05);
+}
+
+.vehicle-card.active {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.06);
+}
+
+/* subtle dim for non-hovered cards */
+.vehicle-grid:hover .vehicle-card {
+  opacity: 0.45;
+  filter: saturate(0.6);
+}
+
+.vehicle-grid:hover .vehicle-card:hover {
+  opacity: 1;
+  filter: none;
+}
+
+.vehicle-card.active {
+  opacity: 1;
+}
+
+.vehicle-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(255,255,255,0.06), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.vehicle-card:hover::before {
+  opacity: 1;
+}
+
+
+/* ========================================
+VEHICLE IMAGE AREA
+======================================== */
+
+.vehicle-image {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vehicle-image::after {
+  content: "";
+  position: absolute;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 24px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255,255,255,0.08),
+    transparent 70%
+  );
+  filter: blur(12px);
+}
+
+
+/* ========================================
+VEHICLE LOGO
+======================================== */
+
+.vehicle-logo {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) translate(var(--mx), calc(var(--my) * 0.6)) scale(1);
+  z-index: 2;
+  transition:
+    transform 0.42s cubic-bezier(0.22,1,0.36,1),
+    opacity 0.28s ease;
+}
+
+.vehicle-logo img {
+  max-width: 220px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  opacity: 0.9;
+  transition:
+    transform 0.42s cubic-bezier(.22,1,.36,1),
+    opacity 0.25s ease;
+}
+
+.vehicle-card:hover .vehicle-logo {
+  transform: translateX(-50%) translate(calc(var(--mx) * 1.1), calc(var(--my) * 0.7 - 6px)) scale(1.5);
+}
+
+.vehicle-card.active .vehicle-logo {
+  transform: translateX(-50%) translate(calc(var(--mx) * 0.7), calc(var(--my) * 0.45 - 3px)) scale(1.12);
+}
+
+.vehicle-card.active:hover .vehicle-logo {
+  transform: translateX(-50%) translate(calc(var(--mx) * 1.1), calc(var(--my) * 0.7 - 6px)) scale(1.5);
+}
+
+.vehicle-card:hover .vehicle-logo img {
+  opacity: 1;
+}
+
+
+/* ========================================
+VEHICLE CAR IMAGE
+======================================== */
+
+.vehicle-car {
+  width: 90%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.42s cubic-bezier(0.22,1,0.36,1);
+  transform: translate(var(--mx), var(--my)) scale(1);
+}
+
+.vehicle-card:hover .vehicle-car {
+  transform: translate(calc(var(--mx) * 1.2), calc(var(--my) * 1.2 - 8px)) scale(1.08);
+}
+
+.vehicle-card.active .vehicle-car {
+  transform: translate(calc(var(--mx) * 0.8), calc(var(--my) * 0.8 - 4px)) scale(1.03);
+}
+
+.vehicle-card.active:hover .vehicle-car {
+  transform: translate(calc(var(--mx) * 1.2), calc(var(--my) * 1.2 - 8px)) scale(1.08);
+}
+
+
+/* ========================================
+VEHICLE DESCRIPTION
+======================================== */
+
+.vehicle-desc {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  right: 22px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+  transition:
+    transform 0.35s cubic-bezier(0.22,1,0.36,1),
+    color 0.25s ease;
+  transform: translate(calc(var(--mx) * 0.35), calc(var(--my) * 0.2));
+  z-index: 2;
+}
+
+.vehicle-card:hover .vehicle-desc {
+  color: rgba(255,255,255,0.9);
+}
+
+
+/* ========================================
+PILLARS
+======================================== */
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.pillar-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.pillar-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.pillar-card h3 {
+  font-size: 18px;
+  margin: 20px 20px 10px;
+}
+
+.pillar-card p {
+  margin: 0 20px 24px;
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+}
+
+
+/* ========================================
+FOOTER
+======================================== */
+
+.footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 44px 0;
+  margin-top: 60px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-desc {
+  color: rgba(255,255,255,0.55);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.footer-disclaimer {
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.45);
+  max-width: 800px;
+}
+
+
+/* ========================================
+PRODUCTS PAGE
+======================================== */
+
+.products-title {
+  font-size: 42px;
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.filter-block {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.82);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filter-chip:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-1px);
+}
+
+.filter-chip.active {
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+  border-color: rgba(255,255,255,0.18);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.product-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  transition:
+    transform 0.28s cubic-bezier(0.22,1,0.36,1),
+    background 0.28s cubic-bezier(0.22,1,0.36,1);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.05);
+}
+
+.product-image-wrap {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-status {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+}
+
+.product-body {
+  padding: 20px 20px 24px;
+}
+
+.product-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.product-body p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.62);
+}
+
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media (max-width: 1200px) {
+  .vehicle-image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-image {
+    height: 300px;
+  }
+
+  .vehicle-logo img {
+    max-width: 160px;
+    max-height: 30px;
+  }
+
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .vehicle-image {
+    height: 260px;
+  }
+
+  .vehicle-logo img {
+    max-width: 140px;
+    max-height: 28px;
+  }
+
+  .vehicle-desc {
+    bottom: 16px;
+    left: 18px;
+    right: 18px;
+    font-size: 12px;
+  }
+
+  .products-title {
+    font-size: 34px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image-wrap {
+    height: 220px;
+  }
+}

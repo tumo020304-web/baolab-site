@@ -3,9 +3,19 @@ import type { Metadata } from "next";
 import Header from "./Header";
 
 export const metadata: Metadata = {
-  title: "BAOLAB - Denza B5 & B8 Accessories",
+  title: "BaoLab — Premium Denza Accessories Australia",
   description:
-    "Premium retrofit-ready accessories for Denza B5 and B8 in Australia.",
+    "Premium aftermarket accessories for Denza B5, B8, D9, Z9 GT, and N7. Quality tested, shipped from China. Free shipping over $99.",
+  metadataBase: new URL("https://baolab.au"),
+  openGraph: {
+    title: "BaoLab — Premium Denza Accessories Australia",
+    description:
+      "Premium aftermarket accessories for Denza B5, B8, D9, Z9 GT, and N7.",
+    url: "https://baolab.au",
+    siteName: "BaoLab",
+    locale: "en_AU",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
