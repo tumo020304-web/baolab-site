@@ -18,6 +18,23 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "BaoLab",
+  url: "https://baolab.au",
+  logo: "https://baolab.au/logo.png",
+  description:
+    "Premium aftermarket accessories for Denza B5, B8, D9, Z9 GT, and N7. Quality tested, shipped from China.",
+  email: "tumo020304@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "AU",
+    addressRegion: "VIC",
+  },
+  sameAs: [],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -26,6 +43,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
 
         <main>{children}</main>
