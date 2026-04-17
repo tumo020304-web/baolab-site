@@ -20,7 +20,7 @@ export default function Header() {
     <header className={`header ${scrolled ? "header-scrolled" : ""}`}>
       <div className="container nav">
         <a href="/" className="logo">
-          BAOLAB
+          <img src="/baolab-logo.png" alt="BaoLab" className="logo-img" />
         </a>
 
         <nav className="main-nav">
