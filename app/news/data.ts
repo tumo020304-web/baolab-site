@@ -284,6 +284,159 @@ export const articles: Article[] = [
 <p><em>Read more: <a href="/news/denza-b5-b8-launch">Denza B5 & B8: How the Brand Arrived in Australia</a></em></p>
 `,
   },
+  {
+    slug: "byd-disus-suspension",
+    title:
+      "BYD DiSus Suspension Explained — The Four Tiers of Intelligent Body Control",
+    date: "2026-04-18",
+    category: "Technology",
+    excerpt:
+      "DiSus is BYD's self-developed intelligent body control system, exclusive to new energy vehicles. From the accessible DiSus-C to the extreme DiSus-X that lets a car drive on three wheels, here's every tier explained.",
+    related: [
+      { slug: "denza-b5-b8-launch", title: "Denza B5 & B8: How the Brand Arrived in Australia" },
+      { slug: "byd-e3-platform", title: "The e³ Platform: Denza's Premium Architecture" },
+      { slug: "z9gt-melbourne-debut", title: "Denza Z9 GT Confirmed for Australia" },
+    ],
+    content: `
+<p>When BYD unveiled its DiSus Intelligent Body Control System in April 2023, it became the first Chinese automaker to own the full-stack intelligent vehicle body control technology — from the sensors to the actuators to the software that ties it all together. The system was developed exclusively for new energy vehicles (NEVs) and is now rolling out across BYD, Denza, and YangWang models.</p>
+
+<h2>What Does "DiSus" Mean?</h2>
+<p>The English name combines <strong>Di</strong> (the "D" from BYD — it appears across many BYD names, like the Xiao Di voice assistant and DiPilot self-driving system) with <strong>Sus</strong> (from suspension). The Chinese name is <strong>云辇 (Yǔnnián)</strong>, which loosely translates to something like "cloud carriage" — a poetic reference to the emperor's cloud-like chariot and the floating ride quality the system aims to deliver.</p>
+
+<h2>Why It Matters</h2>
+<p>Suspension technology has traditionally been the domain of European luxury brands. Mercedes-Benz has AIRMATIC and MAGIC BODY CONTROL, BMW has Adaptive M Suspension, and Porsche has PASM. DiSus represents BYD's answer — and in some ways, it exceeds what the Europeans offer, particularly in the hydraulic and extreme-performance tiers.</p>
+
+<p>The key innovation is that DiSus is purpose-built for electric and hybrid vehicles, where heavy battery packs change the dynamics of how a car rides and handles. Traditional suspension tuning assumes a petrol engine and fuel tank — DiSus accounts for the weight and placement of batteries from the ground up.</p>
+
+<h2>The Four Tiers</h2>
+
+<h3>DiSus-C: Intelligent Damping Body Control</h3>
+<p><strong>What it is:</strong> The entry-level tier, similar to CDC (Continuously Damping Control) variable damping systems found in many premium cars.</p>
+<p><strong>How it works:</strong> Electronic control valves inside each shock absorber adjust the damping force in real time. The system reads the road and adjusts each wheel independently to balance comfort and handling.</p>
+<p><strong>Where you'll find it:</strong> BYD Han, Tang, and some Denza models. Several models gained DiSus-C via a simple OTA software update because they already had the necessary hardware installed from the factory.</p>
+
+<h3>DiSus-A: Intelligent Air Body Control</h3>
+<p><strong>What it is:</strong> The mid-tier system, using air suspension instead of traditional coil springs.</p>
+<p><strong>How it works:</strong> Air springs at each corner can raise or lower the vehicle by up to <strong>150mm</strong>. The system automatically adjusts ride height based on speed, road conditions, and driving mode. At highway speeds, it lowers the car for better aerodynamics and stability. Off-road, it raises it for extra clearance.</p>
+<p><strong>Where you'll find it:</strong> The Denza N7 was the first model to feature DiSus-A, and it's now available across several BYD and Denza models with air suspension hardware.</p>
+
+<h3>DiSus-P: Intelligent Hydraulic Body Control</h3>
+<p><strong>What it is:</strong> The flagship tier. This is the system behind the YangWang U8's famous tank turns and water wading demonstrations. It uses hydraulic actuators rather than air springs or passive dampers.</p>
+<p><strong>How it works:</strong> Each wheel has its own hydraulic spring assembly that can be individually controlled. The system can raise or lower the suspension by up to <strong>200mm</strong> and can individually adjust each wheel's position in real time. On-board sensors — including LiDAR on some models — scan the road ahead and pre-adjust the suspension before the car reaches a bump or pothole.</p>
+<p><strong>Key capabilities:</strong></p>
+<ul>
+<li>200mm ride height adjustment — from slammed for highway to maximum clearance for off-road</li>
+<li>Individual wheel control — each corner adjusts independently for flat cornering</li>
+<li>Tank turn capability — the U8 can spin on the spot with hydraulic suspension keeping the body stable</li>
+<li>Water wading mode — raises the body to maximum height for deep water crossings</li>
+<li>Active body control — virtually eliminates body roll in corners and nose dive under braking</li>
+</ul>
+<p><strong>Where you'll find it:</strong> YangWang U8 (G-Wagen competitor) and <strong>Denza B8</strong> (flagship off-road SUV available in Australia). The B8's DiSus-P is what gives a $97,990 SUV ride quality that rivals vehicles costing two or three times the price.</p>
+
+<h3>DiSus-X: Extreme Performance</h3>
+<p><strong>What it is:</strong> The most extreme tier — found on the YangWang U9 electric supercar. Enables the U9 to drive on three wheels and "dance" by bouncing its body on command. A technology showcase proving the system has headroom far beyond what any road car currently needs.</p>
+
+<h2>How the Tiers Compare</h2>
+<table>
+<tr><th>Feature</th><th>DiSus-C</th><th>DiSus-A</th><th>DiSus-P</th><th>DiSus-X</th></tr>
+<tr><td>Type</td><td>Variable damping</td><td>Air suspension</td><td>Hydraulic</td><td>Extreme hydraulic</td></tr>
+<tr><td>Ride height</td><td>No</td><td>Up to 150mm</td><td>Up to 200mm</td><td>200mm+</td></tr>
+<tr><td>Tank turn</td><td>No</td><td>No</td><td>Yes (U8)</td><td>Yes</td></tr>
+<tr><td>3-wheel driving</td><td>No</td><td>No</td><td>No</td><td>Yes (U9)</td></tr>
+<tr><td>In Australia</td><td>TBC</td><td>TBC</td><td>Yes (B8)</td><td>No</td></tr>
+</table>
+
+<p>As BYD and Denza expand in Australia, expect more models with DiSus technology — from accessible DiSus-C on mainstream models to flagship DiSus-P on premium vehicles.</p>
+
+<p><em>Read more: <a href="/news/denza-b5-b8-launch">Denza B5 & B8: How the Brand Arrived in Australia</a> · <a href="/news/byd-e3-platform">The e³ Platform Explained</a></em></p>
+`,
+  },
+
+  {
+    slug: "byd-e3-platform",
+    title:
+      "The e³ Platform — Denza's Premium Architecture Explained",
+    date: "2026-04-18",
+    category: "Technology",
+    excerpt:
+      "Pronounced 'e cube', the e³ platform is BYD's industry-leading architecture developed exclusively for Denza. Named after its three core components — powertrain, control systems, and intelligent architecture.",
+    related: [
+      { slug: "z9gt-melbourne-debut", title: "Denza Z9 GT Confirmed for Australia" },
+      { slug: "byd-disus-suspension", title: "BYD DiSus Suspension — All Four Tiers Explained" },
+      { slug: "flash-charge-blade-battery", title: "Flash Ultra Charging & Blade Battery 2.0" },
+    ],
+    content: `
+<p>Every car brand has its defining platform — the underlying architecture that determines what a vehicle can do. Volkswagen has MEB, Hyundai has E-GMP, and Tesla has its skateboard chassis. For Denza, BYD's premium sub-brand, that platform is <strong>e³</strong> — pronounced "e cube".</p>
+
+<h2>What is e³?</h2>
+<p>The e³ platform is an industry-leading architecture developed specifically for Denza by BYD. According to BYD's own media materials, the name comes from its combination of <strong>three major components</strong>:</p>
+<ol>
+<li><strong>Powertrain architecture</strong> — compatible with both plug-in hybrid (PHEV) and pure electric (BEV) configurations, including the first use of Cell-to-Body construction in a super hybrid vehicle</li>
+<li><strong>Control architecture</strong> — featuring three-motor independent drive and rear-wheel dual motor steering technology</li>
+<li><strong>Intelligent architecture</strong> — focused on the deep integration of artificial intelligence and electrification</li>
+</ol>
+
+<p>Unlike a simple chassis that you bolt different bodies onto, e³ is a ground-up design where the battery, motors, suspension, and electronics are all engineered as a single integrated system.</p>
+
+<h2>800-Volt High-Voltage Architecture</h2>
+<p>One of the headline specs of the e³ platform is its <strong>800-volt high-voltage electrical system</strong>. Most EVs on sale today use 400V architecture. The move to 800V unlocks several major advantages:</p>
+<ul>
+<li><strong>Faster charging</strong> — higher voltage means more power can flow through the same cables with less heat. The Z9 GT on e³ supports up to 1500kW DC charging.</li>
+<li><strong>Lighter wiring</strong> — 800V systems can use thinner cables (same power at higher voltage = lower current = thinner wires), saving weight.</li>
+<li><strong>Better efficiency</strong> — less energy lost as heat in the electrical system, meaning more range per kWh.</li>
+<li><strong>Higher motor performance</strong> — enables more powerful motors with better sustained output.</li>
+</ul>
+
+<p>Porsche was the first to bring 800V to production cars with the Taycan in 2019. BYD's e³ platform brings the same voltage level to Denza at a significantly lower price point.</p>
+
+<h2>Tri-Motor Independent Drive</h2>
+<p>The e³ platform supports a <strong>tri-motor layout</strong> — one motor on the front axle and two independent motors on the rear. This is the configuration used in the Z9 GT, producing a combined 850kW.</p>
+<p>The dual rear motors enable features that a single rear motor can't achieve:</p>
+<ul>
+<li><strong>Torque vectoring</strong> — sending different amounts of power to each rear wheel, improving cornering grip and stability</li>
+<li><strong>Compass Turn</strong> — BYD's name for a tank turn, where the car can spin on the spot by driving one rear motor forward and the other backward</li>
+<li><strong>Better traction control</strong> — if one wheel loses grip, the other can compensate independently</li>
+</ul>
+
+<h2>Rear-Wheel Dual Motor Steering</h2>
+<p>Beyond just driving the wheels, the e³ platform's control architecture includes <strong>rear-wheel steering</strong> powered by the dual rear motors. At low speeds, the rear wheels turn in the opposite direction to the fronts, reducing the turning circle — handy for a 5-metre-long grand tourer in car parks. At high speeds, they turn in the same direction as the fronts for improved stability.</p>
+
+<h2>Cell-to-Body (CTB) Construction</h2>
+<p>The e³ platform uses BYD's <strong>Cell-to-Body</strong> technology, where the battery cells are integrated directly into the vehicle's structure rather than sitting in a separate battery pack. This:</p>
+<ul>
+<li>Increases structural rigidity (the battery becomes part of the chassis)</li>
+<li>Lowers the centre of gravity</li>
+<li>Maximises interior space by eliminating wasted volume around the battery pack</li>
+<li>Improves crash safety — the battery structure adds strength to the floor</li>
+</ul>
+<p>BYD claims CTB gives the e³ platform a torsional rigidity comparable to luxury vehicles costing significantly more.</p>
+
+<h2>Which Cars Use e³?</h2>
+<p>The e³ platform is exclusive to Denza vehicles. Current and upcoming models built on e³ include:</p>
+<ul>
+<li><strong>Denza Z9 GT</strong> — the all-electric grand tourer debuting in Australia in Q3 2026. Tri-motor, 850kW, 0-100 in 2.7s.</li>
+<li><strong>Denza Z9</strong> — the sedan variant of the Z9 GT</li>
+<li>Future Denza models as the brand expands globally</li>
+</ul>
+
+<h2>e³ vs e-Platform 3.0</h2>
+<p>BYD's mainstream models (Atto 3, Seal, Dolphin, etc.) use <strong>e-Platform 3.0</strong> and its evolution <strong>e-Platform 3.0 Evo</strong>. The e³ platform is Denza's premium-exclusive upgrade:</p>
+<table>
+<tr><th>Feature</th><th>e-Platform 3.0</th><th>e³ (Denza)</th></tr>
+<tr><td>Voltage</td><td>400V</td><td>800V</td></tr>
+<tr><td>Motor layout</td><td>Single or dual</td><td>Up to tri-motor</td></tr>
+<tr><td>Rear-wheel steering</td><td>No</td><td>Yes (dual motor)</td></tr>
+<tr><td>Max DC charging</td><td>~150kW</td><td>Up to 1500kW (Flash)</td></tr>
+<tr><td>CTB construction</td><td>Some models</td><td>Standard</td></tr>
+<tr><td>Brand</td><td>BYD</td><td>Denza</td></tr>
+</table>
+
+<p>The e³ platform is what allows Denza to compete with Porsche, BMW, and Mercedes on technology and performance while maintaining a significant price advantage. It's the foundation that makes the Z9 GT's 850kW output and 1500kW charging possible.</p>
+
+<p><em>Read more: <a href="/news/z9gt-melbourne-debut">Denza Z9 GT Debuts at Melbourne Motor Show</a> · <a href="/news/byd-disus-suspension">DiSus Suspension Explained</a> · <a href="/news/flash-charge-blade-battery">Flash Ultra Charging & Blade Battery 2.0</a></em></p>
+`,
+  },
+
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
