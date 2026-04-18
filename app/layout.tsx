@@ -29,6 +29,7 @@ const jsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
+    email: "hello@baolab.au",
     availableLanguage: "English",
   },
   address: {

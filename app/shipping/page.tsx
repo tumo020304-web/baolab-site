@@ -10,7 +10,7 @@ export default function Shipping() {
         <p><strong>Tracking:</strong> Provided on all orders</p>
       </div>
       <p style={{ marginTop: 24, color: "rgba(255,255,255,0.5)", fontSize: 14 }}>
-        For delivery questions, contact us via our contact page
+        For delivery questions, email us at hello@baolab.au
       </p>
     </div>
   );
