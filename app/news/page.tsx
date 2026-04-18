@@ -52,6 +52,11 @@ export default function NewsPage() {
                 href={`/news/${article.slug}`}
                 className="news-card"
               >
+                {article.image && (
+                  <div className="news-card-image">
+                    <img src={article.image} alt={article.title} />
+                  </div>
+                )}
                 <div className="news-card-meta">
                   <span className="news-category">{article.category}</span>
                   <span className="news-date">

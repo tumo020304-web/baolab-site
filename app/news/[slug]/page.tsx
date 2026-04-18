@@ -76,6 +76,12 @@ export default async function ArticlePage({
 
           <h1 className="article-title">{article.title}</h1>
 
+          {article.image && (
+            <div className="article-hero">
+              <img src={article.image} alt={article.title} />
+            </div>
+          )}
+
           <div
             className="article-body"
             dangerouslySetInnerHTML={{ __html: article.content }}
