@@ -25,6 +25,7 @@ export default function Header() {
 
         <nav className="main-nav">
           <a href="https://shop.baolab.au">Products</a>
+          <a href="/news">News</a>
           <a href="/compatibility">Compatibility</a>
           <a href="/shipping">Shipping</a>
           <a href="/contact">Contact</a>
