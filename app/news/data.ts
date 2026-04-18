@@ -39,13 +39,14 @@ export const articles: Article[] = [
 <tr><td>0–100 km/h</td><td>2.7 seconds</td></tr>
 <tr><td>Battery</td><td>122.5kWh Blade Battery 2.0</td></tr>
 <tr><td>Range (CLTC)</td><td>1,036 km</td></tr>
+<tr><td>Range (real world)</td><td>1,009 km demonstrated (Hainan test)</td></tr>
 <tr><td>DC fast charge</td><td>10–97% in 9 minutes (1500kW)</td></tr>
 <tr><td>Suspension</td><td>Air suspension</td></tr>
 <tr><td>Price (expected)</td><td>~$180,000–$220,000 (TBC, undercuts Taycan)</td></tr>
 </table>
 
 <h2>Range & Charging</h2>
-<p>The Z9 GT will ship with the large 122.5kWh battery, giving it a CLTC-rated range of <strong>1,036 km</strong>. Real-world range is estimated around <strong>600–650 km</strong> depending on driving conditions — still exceptional for a high-performance electric GT.</p>
+<p>The Z9 GT will ship with the large 122.5kWh battery, giving it a CLTC-rated range of <strong>1,036 km</strong>. Real-world range has been demonstrated at over <strong>1,000 km</strong> in a Chinese media test — a Z9 GT drove around Hainan Island with two passengers, AC set to 23°C on auto, at speed limits across various road types, and covered 1,009 km with 9% battery remaining (estimated 93 km range left). Even conservative driving estimates put it at 800+ km in real-world conditions.</p>
 
 <p>But the headline feature is <strong>Flash Ultra Charging</strong>. Using Blade Battery 2.0 technology, the Z9 GT supports up to 1500kW DC charging — nearly four times Australia's current fastest public charger (400kW). Denza claims a 10–97% charge in just <strong>nine minutes</strong> under optimal conditions. That's shorter than a typical petrol fill-up.</p>
 
@@ -58,7 +59,7 @@ export const articles: Article[] = [
 <ul>
 <li>Nappa leather upholstery with massaging and ventilated seats</li>
 <li>50-inch augmented reality head-up display</li>
-<li>Premium sound system</li>
+<li>14-speaker Dynaudio sound system</li>
 <li>Built-in fridge</li>
 <li>128-colour ambient lighting</li>
 <li>Air suspension for a plush, wafting ride</li>
@@ -138,7 +139,7 @@ export const articles: Article[] = [
       { slug: "denza-d9-electric-mpv", title: "Denza D9: The Electric People Mover" },
     ],
     content: `
-<p>In early 2026, BYD officially launched its premium sub-brand <strong>Denza</strong> in Australia with two models that nobody expected: not sleek city EVs, but rugged, body-on-frame plug-in hybrid 4×4 SUVs. The <strong>Denza B5</strong> and <strong>B8</strong> arrived as direct challengers to the Toyota LandCruiser, Nissan Patrol, and Jeep Wrangler — but with a high-tech electrified twist.</p>
+<p>In December 2025, BYD officially launched its premium sub-brand <strong>Denza</strong> in Australia with two models that nobody expected: not sleek city EVs, but rugged, body-on-frame plug-in hybrid 4×4 SUVs. The <strong>Denza B5</strong> and <strong>B8</strong> arrived as direct challengers to the Toyota LandCruiser, Nissan Patrol, and Jeep Wrangler — but with a high-tech electrified twist.</p>
 
 <h2>What is Denza?</h2>
 <p>Denza (腾势) is BYD's premium brand, positioned above BYD's mainstream models. Think of it like Lexus is to Toyota, or Genesis is to Hyundai. While BYD focuses on accessible electric vehicles, Denza targets the luxury and performance segments.</p>
@@ -155,19 +156,21 @@ export const articles: Article[] = [
 <tr><td>Front motor</td><td>200kW / 360Nm</td></tr>
 <tr><td>Rear motor</td><td>300kW / 400Nm</td></tr>
 <tr><td>System output</td><td>425kW / 760Nm</td></tr>
-<tr><td>Battery</td><td>36.8kWh LFP (Blade Battery)</td></tr>
-<tr><td>Electric range</td><td>100–115km</td></tr>
+<tr><td>Battery</td><td>LFP (Blade Battery)</td></tr>
+<tr><td>Combined range</td><td>1,040km (NEDC)</td></tr>
+<tr><td>Electric range</td><td>100–115km (WLTC)</td></tr>
 <tr><td>0–100 km/h</td><td>4.8 seconds</td></tr>
 <tr><td>Fuel economy</td><td>2.0L/100km (charged)</td></tr>
 <tr><td>Towing</td><td>3,500kg braked</td></tr>
-<tr><td>Wading depth</td><td>890mm</td></tr>
-<tr><td>Ground clearance</td><td>310mm</td></tr>
+<tr><td>Wading depth</td><td>890mm (DiSus-P raised)</td></tr>
+<tr><td>Ground clearance</td><td>310mm (DiSus-P raised)</td></tr>
+<tr><td>DiSus-P travel</td><td>140mm</td></tr>
 <tr><td>Seats</td><td>6 or 7</td></tr>
 <tr><td>Price</td><td>$91,000 – $97,990 +ORC</td></tr>
 </table>
 
 <h3>DiSus-P: The Secret Weapon</h3>
-<p>One of the B8's standout features is <strong>DiSus-P</strong> — BYD's Intelligent Hydraulic Body Control System. It's the most advanced version of BYD's DiSus suspension technology (which comes in four tiers: DiSus-C, DiSus-A, DiSus-P, and DiSus-X). The same technology first debuted on the YangWang U8, BYD's G-Wagen competitor — it's what allows the U8 to do tank turns.</p>
+<p>One of the B8's standout features is <strong>DiSus-P</strong> — BYD's Intelligent Hydraulic Body Control System. It's the most advanced version of BYD's DiSus suspension technology (which comes in four tiers: DiSus-C, DiSus-A, DiSus-P, and DiSus-X). The same technology first debuted on the YangWang U8 — which was spotted testing on Australian roads in late 2024 — it's what allows the U8 to do tank turns.</p>
 <ul>
 <li><strong>200mm ride height adjustment</strong> — raise for off-road clearance (up to 310mm), lower for highway efficiency</li>
 <li><strong>Hydraulic spring assembly at each wheel</strong> — individually adjusts to road surface conditions</li>
@@ -209,7 +212,7 @@ export const articles: Article[] = [
 </ul>
 
 <h2>The Denza B5: Compact Adventure SUV</h2>
-<p>The B5 is the smaller, more affordable sibling. It shares the same DMO platform and DiSus-P suspension but in a more compact, lifestyle-oriented package aimed at younger buyers and outdoor enthusiasts.</p>
+<p>The B5 LEOPARD is the smaller, more affordable sibling. It also uses the DMO platform and DiSus-P hydraulic suspension (140mm travel), though its DiSus-P implementation is a simpler two-tier damping system compared to the B8's three-tier setup, and it lacks the B8's preaim (云辇预瞄) feature — the LiDAR/camera-based system that scans the road ahead and pre-adjusts the suspension. It also uses a 1.5-litre turbo engine instead of the B8's 2.0-litre, producing 400kW combined versus the B8's 425kW.</p>
 
 <p>While the B8 competes with LandCruiser and Patrol, the B5 targets vehicles like the Toyota Fortuner, Isuzu MU-X, and Jeep Wrangler — but with plug-in hybrid efficiency and significantly more power.</p>
 
@@ -225,7 +228,7 @@ export const articles: Article[] = [
     slug: "denza-d9-electric-mpv",
     title:
       "Denza D9: The Luxury Electric People Mover Coming to Australia",
-    date: "2026-01-29",
+    date: "2026-03-02",
     category: "Launch",
     excerpt:
       "The Denza D9 is a premium electric people mover that competes with the Kia Carnival and Volkswagen Multivan — but with electric power, six captain's chairs, and luxury car refinement.",
@@ -237,7 +240,7 @@ export const articles: Article[] = [
 <p>While the B5 and B8 grabbed attention as rugged off-roaders, Denza's third Australian model targets a very different buyer: the <strong>Denza D9</strong> is a luxury electric people mover designed to replace the traditional family van with something far more refined.</p>
 
 <h2>What is the D9?</h2>
-<p>The D9 is a large, all-electric MPV (multi-purpose vehicle) that seats up to seven passengers. In China, it's been a massive hit — outselling the Toyota Alphard and becoming the best-selling premium MPV in the country. Now it's heading to Australia.</p>
+<p>The D9 is a large, all-electric MPV (multi-purpose vehicle) that seats up to seven passengers. In China, it's been a massive hit — rivalling the Toyota Alphard in sales and becoming one of the best-selling premium MPVs in the country. Now it's heading to Australia.</p>
 
 <p>Think of it as a Kia Carnival or Volkswagen Multivan, but with the refinement of a Mercedes S-Class and the powertrain of an electric car.</p>
 
@@ -261,8 +264,12 @@ export const articles: Article[] = [
 <tr><td>Platform</td><td>e-Platform 3.0</td></tr>
 <tr><td>Battery</td><td>103kWh LFP (Blade Battery)</td></tr>
 <tr><td>Range</td><td>600+ km (CLTC)</td></tr>
-<tr><td>Drive</td><td>Front-wheel drive / AWD variants</td></tr>
-<tr><td>Charging</td><td>DC fast charging supported</td></tr>
+<tr><td>Drive</td><td>FWD / AWD</td></tr>
+<tr><td>Battery</td><td>103.3kWh Blade Battery</td></tr>
+<tr><td>Range</td><td>600km (NEDC) / 520km (WLTP)</td></tr>
+<tr><td>Max DC charge rate</td><td>200kW</td></tr>
+<tr><td>Max AC charge rate</td><td>11kW</td></tr>
+<tr><td>0–100 km/h</td><td>6.9 seconds (AWD)</td></tr>
 </table>
 
 <h2>Who is it For?</h2>
@@ -322,10 +329,10 @@ export const articles: Article[] = [
 
 <h3>DiSus-P: Intelligent Hydraulic Body Control</h3>
 <p><strong>What it is:</strong> The flagship tier. This is the system behind the YangWang U8's famous tank turns and water wading demonstrations. It uses hydraulic actuators rather than air springs or passive dampers.</p>
-<p><strong>How it works:</strong> Each wheel has its own hydraulic spring assembly that can be individually controlled. The system can raise or lower the suspension by up to <strong>200mm</strong> and can individually adjust each wheel's position in real time. On-board sensors — including LiDAR on some models — scan the road ahead and pre-adjust the suspension before the car reaches a bump or pothole.</p>
+<p><strong>How it works:</strong> Each wheel has its own hydraulic spring assembly that can be individually controlled. On the Denza B8, this provides 140mm of travel. The system can individually adjust each wheel's position in real time. On-board sensors — including LiDAR on some models — scan the road ahead and pre-adjust the suspension before the car reaches a bump or pothole.</p>
 <p><strong>Key capabilities:</strong></p>
 <ul>
-<li>200mm ride height adjustment — from slammed for highway to maximum clearance for off-road</li>
+<li>140mm ride height adjustment on B5/B8 (200mm on YangWang U8) — from slammed for highway to maximum clearance for off-road</li>
 <li>Individual wheel control — each corner adjusts independently for flat cornering</li>
 <li>Tank turn capability — the U8 can spin on the spot with hydraulic suspension keeping the body stable</li>
 <li>Water wading mode — raises the body to maximum height for deep water crossings</li>
