@@ -1123,3 +1123,23 @@ NEWS — IMAGES
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
+
+/* Mobile nav fix */
+@media (max-width: 768px) {
+  .nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+  .main-nav a {
+    margin-left: 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .logo-img {
+    height: 26px;
+  }
+}
