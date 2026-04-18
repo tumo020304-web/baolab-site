@@ -13,7 +13,7 @@ export const articles: Article[] = [
     slug: "z9gt-melbourne-debut",
     title:
       "Denza Z9 GT Debuts at the 2026 Melbourne Motor Show — 850kW, 0–100 in 2.7s",
-    date: "2026-04-09",
+    date: "2026-02-12",
     category: "Launch",
     excerpt:
       "BYD's luxury division confirms the all-electric Z9 GT grand tourer for Australia, with deliveries expected Q3 2026. The first Denza to feature Blade Battery 2.0 and Flash Ultra Charging.",
@@ -76,7 +76,7 @@ export const articles: Article[] = [
     slug: "flash-charge-blade-battery",
     title:
       "Flash Ultra Charging & Blade Battery 2.0 — What It Means for Australia",
-    date: "2026-04-10",
+    date: "2026-02-26",
     category: "Technology",
     excerpt:
       "BYD's next-gen Blade Battery 2.0 supports 1500kW DC charging — nearly four times Australia's fastest public chargers. The Z9 GT will be the first model to feature it locally.",
@@ -129,7 +129,7 @@ export const articles: Article[] = [
     slug: "denza-b5-b8-launch",
     title:
       "Denza B5 & B8: How BYD's Luxury Brand Arrived in Australia",
-    date: "2026-02-15",
+    date: "2025-12-15",
     category: "Launch",
     excerpt:
       "Denza launched in Australia with two rugged plug-in hybrid SUVs — the B5 and B8. Featuring DiSus-P adjustable suspension, DMO 4×4 architecture, and serious off-road credentials, they're unlike anything else in the market.",
@@ -225,7 +225,7 @@ export const articles: Article[] = [
     slug: "denza-d9-electric-mpv",
     title:
       "Denza D9: The Luxury Electric People Mover Coming to Australia",
-    date: "2026-03-20",
+    date: "2026-01-29",
     category: "Launch",
     excerpt:
       "The Denza D9 is a premium electric people mover that competes with the Kia Carnival and Volkswagen Multivan — but with electric power, six captain's chairs, and luxury car refinement.",
@@ -288,7 +288,7 @@ export const articles: Article[] = [
     slug: "byd-disus-suspension",
     title:
       "BYD DiSus Suspension Explained — The Four Tiers of Intelligent Body Control",
-    date: "2026-04-18",
+    date: "2026-01-15",
     category: "Technology",
     excerpt:
       "DiSus is BYD's self-developed intelligent body control system, exclusive to new energy vehicles. From the accessible DiSus-C to the extreme DiSus-X that lets a car drive on three wheels, here's every tier explained.",
@@ -356,7 +356,7 @@ export const articles: Article[] = [
     slug: "byd-e3-platform",
     title:
       "The e³ Platform — Denza's Premium Architecture Explained",
-    date: "2026-04-18",
+    date: "2026-03-12",
     category: "Technology",
     excerpt:
       "Pronounced 'e cube', the e³ platform is BYD's industry-leading architecture developed exclusively for Denza. Named after its three core components — powertrain, control systems, and intelligent architecture.",
