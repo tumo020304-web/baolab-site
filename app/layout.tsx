@@ -26,7 +26,11 @@ const jsonLd = {
   logo: "https://baolab.au/logo.png",
   description:
     "Premium aftermarket accessories for Denza B5, B8, D9, Z9 GT, and N7. Quality tested, shipped from China.",
-  email: "tumo020304@gmail.com",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    availableLanguage: "English",
+  },
   address: {
     "@type": "PostalAddress",
     addressCountry: "AU",
