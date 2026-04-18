@@ -12,7 +12,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     slug: "z9gt-melbourne-debut",
-    image: "/images/vehicles/z9gt.png",
+    image: "/z9gt-hero.jpg",
     title:
       "Denza Z9 GT Debuts at the 2026 Melbourne Motor Show — 850kW, 0–100 in 2.7s",
     date: "2026-02-12",
@@ -77,7 +77,7 @@ export const articles: Article[] = [
   },
   {
     slug: "flash-charge-blade-battery",
-    image: "/flash-charger-hero.webp",
+    image: "/flash-charger-hero.jpg",
     title:
       "Flash Ultra Charging & Blade Battery 2.0 — What It Means for Australia",
     date: "2026-02-26",
@@ -131,7 +131,7 @@ export const articles: Article[] = [
   },
   {
     slug: "denza-b5-b8-launch",
-    image: "/b5-b8-hero.webp",
+    image: "/b5-b8-hero.jpg",
     title:
       "Denza B5 & B8: How BYD's Luxury Brand Arrived in Australia",
     date: "2025-12-15",
@@ -230,7 +230,7 @@ export const articles: Article[] = [
   },
   {
     slug: "denza-d9-electric-mpv",
-    image: "/denza-d9-hero.webp",
+    image: "/denza-d9-hero.jpg",
     title:
       "Denza D9: The Luxury Electric People Mover Coming to Australia",
     date: "2026-03-02",
@@ -298,7 +298,7 @@ export const articles: Article[] = [
   },
   {
     slug: "byd-disus-suspension",
-    image: "/disus-p-hero.jpg",
+    image: "/disus-banner.jpg",
     title:
       "BYD DiSus Suspension Explained — The Four Tiers of Intelligent Body Control",
     date: "2026-01-15",
@@ -359,6 +359,15 @@ export const articles: Article[] = [
 <tr><td>In Australia</td><td>TBC</td><td>TBC</td><td>Yes (B8)</td><td>No</td></tr>
 </table>
 
+
+<p><strong>📸 Engineering Sample — Fangchengbao B8, China, ~10 April 2026</strong></p>
+<p>DiSus-P in action: this engineering sample B8 was spotted driving on three wheels, with the fourth wheel fully retracted by the hydraulic suspension system. Each corner adjusts independently, allowing the vehicle to maintain stability even with a wheel completely off the ground.</p>
+<div class="article-inline-images">
+  <img src="/disus-3wheel-1.jpg" alt="Fangchengbao B8 engineering sample driving on 3 wheels — DiSus-P hydraulic suspension retracting front-left wheel" loading="lazy" />
+  <img src="/disus-3wheel-2.jpg" alt="Fangchengbao B8 with fourth wheel retracted by DiSus-P system" loading="lazy" />
+  <img src="/disus-3wheel-3.jpg" alt="Close-up of DiSus-P hydraulic suspension holding wheel in retracted position" loading="lazy" />
+</div>
+
 <p>As BYD and Denza expand in Australia, expect more models with DiSus technology — from accessible DiSus-C on mainstream models to flagship DiSus-P on premium vehicles.</p>
 
 <p><em>Read more: <a href="/news/denza-b5-b8-launch">Denza B5 & B8: How the Brand Arrived in Australia</a> · <a href="/news/byd-e3-platform">The e³ Platform Explained</a></em></p>
@@ -367,7 +376,7 @@ export const articles: Article[] = [
 
   {
     slug: "byd-e3-platform",
-    image: undefined,
+    image: "/e3-banner.jpg",
     title:
       "The e³ Platform — Denza's Premium Architecture Explained",
     date: "2026-03-12",
