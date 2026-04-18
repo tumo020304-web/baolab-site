@@ -13,19 +13,21 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Denza Australia News",
-  itemListElement: articles.map((a, i) => ({
-    "@type": "ListItem",
-    position: i + 1,
-    url: `https://baolab.au/news/${a.slug}`,
-    name: a.title,
-  })),
-};
-
 export default function NewsPage() {
+  const sorted = getArticlesSorted();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Denza Australia News",
+    itemListElement: sorted.map((a, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://baolab.au/news/${a.slug}`,
+      name: a.title,
+    })),
+  };
+
   return (
     <>
       <script
@@ -44,7 +46,7 @@ export default function NewsPage() {
           </div>
 
           <div className="news-grid">
-            {articles.map((article) => (
+            {sorted.map((article) => (
               <a
                 key={article.slug}
                 href={`/news/${article.slug}`}
