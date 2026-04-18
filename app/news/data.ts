@@ -25,7 +25,7 @@ export const articles: Article[] = [
 <p>The Denza Z9 GT made its Australian debut at the 2026 Melbourne International Motor Show, and it's nothing short of a statement. BYD's premium sub-brand is aiming squarely at the Porsche Taycan with an all-electric grand tourer that produces a staggering <strong>850kW</strong> from three electric motors and sprints from 0–100 km/h in just <strong>2.7 seconds</strong>.</p>
 
 <h2>What is the Z9 GT?</h2>
-<p>The Z9 GT is a luxury electric shooting brake — think of it as a sleek wagon meets supercar. It's built on BYD's e-Platform 3.0 Evo architecture and is the first Denza model to use the company's next-generation <strong>Blade Battery 2.0</strong> with Flash Ultra Charging capability.</p>
+<p>The Z9 GT is a luxury electric shooting brake — think of it as a sleek wagon meets supercar. It's built on BYD's 800-volt high-voltage <strong>e³ platform</strong> and is the first Denza model to use the company's next-generation <strong>Blade Battery 2.0</strong> with Flash Ultra Charging capability.</p>
 
 <p>Denza Australia Chief Operating Officer Mark Harland said at the reveal: <em>"Australia is a market that demands performance without compromise, and the Z9 GT has been engineered to meet or exceed expectations. It proves that electrification can deliver not just efficiency, but exhilarating performance, extraordinary safety and genuine long-distance usability."</em></p>
 
@@ -41,13 +41,15 @@ export const articles: Article[] = [
 <tr><td>Range (CLTC)</td><td>1,036 km</td></tr>
 <tr><td>DC fast charge</td><td>10–97% in 9 minutes (1500kW)</td></tr>
 <tr><td>Suspension</td><td>Air suspension</td></tr>
-<tr><td>Price (expected)</td><td>Under $181,000 (vs Porsche Taycan)</td></tr>
+<tr><td>Price (expected)</td><td>~$180,000–$220,000 (TBC, undercuts Taycan)</td></tr>
 </table>
 
 <h2>Range & Charging</h2>
-<p>The Z9 GT will ship with the large 122.5kWh battery, giving it a CLTC-rated range of <strong>1,036 km</strong>. Real-world range should be around 800+ km — still exceptional for an electric vehicle.</p>
+<p>The Z9 GT will ship with the large 122.5kWh battery, giving it a CLTC-rated range of <strong>1,036 km</strong>. Real-world range is estimated around <strong>600–650 km</strong> depending on driving conditions — still exceptional for a high-performance electric GT.</p>
 
-<p>But the headline feature is <strong>Flash Ultra Charging</strong>. Using Blade Battery 2.0 technology, the Z9 GT supports up to 1500kW DC charging — nearly four times Australia's current fastest public charger (400kW). Denza claims a 10–97% charge in just <strong>nine minutes</strong>. That's shorter than a typical petrol fill-up when you factor in queueing at the servo.</p>
+<p>But the headline feature is <strong>Flash Ultra Charging</strong>. Using Blade Battery 2.0 technology, the Z9 GT supports up to 1500kW DC charging — nearly four times Australia's current fastest public charger (400kW). Denza claims a 10–97% charge in just <strong>nine minutes</strong> under optimal conditions. That's shorter than a typical petrol fill-up.</p>
+
+<p><em>Note: Flash Ultra Charging requires specific dual-gun charging infrastructure — it can't hit 1500kW on a standard single CCS2 plug. At existing Australian fast chargers (350–400kW), you'll still get a very fast top-up, just not the headline 9-minute number.</em></p>
 
 <p><em>Read more: <a href="/news/flash-charge-blade-battery">Flash Ultra Charging & Blade Battery 2.0 — What It Means for Australia</a></em></p>
 
@@ -165,23 +167,24 @@ export const articles: Article[] = [
 </table>
 
 <h3>DiSus-P: The Secret Weapon</h3>
-<p>One of the B8's standout features is <strong>DiSus-P</strong> (Dual Intelligent Suspension System — Predictive). This is BYD's proprietary adjustable hydraulic suspension system that gives the B8 abilities that rival vehicles costing twice the price:</p>
+<p>One of the B8's standout features is <strong>DiSus-P</strong> — BYD's Intelligent Hydraulic Body Control System. It's the most advanced version of BYD's DiSus suspension technology (which comes in four tiers: DiSus-C, DiSus-A, DiSus-P, and DiSus-X). The same technology first debuted on the YangWang U8, BYD's G-Wagen competitor — it's what allows the U8 to do tank turns.</p>
 <ul>
-<li><strong>Adjustable ride height</strong> — raise for off-road clearance (up to 310mm), lower for highway efficiency</li>
-<li><strong>Variable damping stiffness</strong> — soft for comfort, firm for sporty driving or towing</li>
+<li><strong>200mm ride height adjustment</strong> — raise for off-road clearance (up to 310mm), lower for highway efficiency</li>
+<li><strong>Hydraulic spring assembly at each wheel</strong> — individually adjusts to road surface conditions</li>
 <li><strong>Active body control</strong> — reduces body roll in corners and nose dive under braking</li>
 <li><strong>Water wading mode</strong> — raises the body to its maximum height for deep water crossings (890mm wading depth)</li>
 </ul>
-<p>DiSus-P uses hydraulic cylinders at each corner of the vehicle, controlled by sensors that read the road surface 500 times per second. It can individually adjust each wheel's damping in real time, giving the B8 a ride quality that belies its body-on-frame construction.</p>
+<p>DiSus-P uses hydraulic actuators at each corner of the vehicle, controlled by onboard sensors that read the road surface in real time. It can individually adjust each wheel independently, giving the B8 a ride quality and off-road capability that belies its body-on-frame construction.</p>
 
-<h3>DMO: Dual Motor Off-road</h3>
-<p>The B8 uses BYD's <strong>DMO (Dual Motor Off-road)</strong> platform — a purpose-built architecture for rugged plug-in hybrid 4×4 vehicles. Unlike a traditional 4WD with a transfer case and driveshafts, DMO uses electric motors for each axle:</p>
+<h3>DMO: Dual Mode Off-road</h3>
+<p>The B8 uses BYD's <strong>DMO (Dual Mode Off-road)</strong> platform — a super hybrid-based architecture purpose-built for rugged off-road vehicles. DMO is designed to deliver both efficient urban running and robust off-road performance. It pairs a turbocharged petrol engine with electric motors and a Blade Battery, combined with double-wishbone suspension and high-strength underbody protection.</p>
 <ul>
-<li>200kW front motor drives the front axle</li>
-<li>300kW rear motor drives the rear axle</li>
-<li>The 2.0L turbo engine acts as a range extender and can also directly power the wheels at highway speeds</li>
+<li>2.0L turbo-petrol engine (145kW / 350Nm) works with electric motors for combined 425kW</li>
+<li>200kW front electric motor drives the front axle</li>
+<li>300kW rear electric motor drives the rear axle</li>
 <li>Rear mechanical differential lock (electrically actuated) is standard</li>
 <li>Front locking differential is available on the 6-seat variant</li>
+<li>Intelligent mode management maintains outstanding efficiency with up to 800km+ combined range</li>
 </ul>
 
 <h3>Terrain Modes</h3>
@@ -285,4 +288,10 @@ export const articles: Article[] = [
 
 export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((a) => a.slug === slug);
+}
+
+export function getArticlesSorted(): Article[] {
+  return [...articles].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }

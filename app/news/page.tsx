@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { articles } from "./data";
+import { getArticlesSorted } from "./data";
 
 export const metadata: Metadata = {
   title: "Denza News Australia — BaoLab",
