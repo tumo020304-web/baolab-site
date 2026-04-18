@@ -77,7 +77,7 @@ export const articles: Article[] = [
   },
   {
     slug: "flash-charge-blade-battery",
-    image: "/images/vehicles/z9gt.png",
+    image: "/flash-charger-hero.webp",
     title:
       "Flash Ultra Charging & Blade Battery 2.0 — What It Means for Australia",
     date: "2026-02-26",
@@ -131,7 +131,7 @@ export const articles: Article[] = [
   },
   {
     slug: "denza-b5-b8-launch",
-    image: "/images/vehicles/b8.png",
+    image: "/b5-b8-hero.webp",
     title:
       "Denza B5 & B8: How BYD's Luxury Brand Arrived in Australia",
     date: "2025-12-15",
@@ -230,7 +230,7 @@ export const articles: Article[] = [
   },
   {
     slug: "denza-d9-electric-mpv",
-    image: "/images/vehicles/d9.png",
+    image: "/denza-d9-hero.webp",
     title:
       "Denza D9: The Luxury Electric People Mover Coming to Australia",
     date: "2026-03-02",
@@ -298,7 +298,7 @@ export const articles: Article[] = [
   },
   {
     slug: "byd-disus-suspension",
-    image: "/images/vehicles/b5.png",
+    image: "/disus-p-hero.jpg",
     title:
       "BYD DiSus Suspension Explained — The Four Tiers of Intelligent Body Control",
     date: "2026-01-15",
@@ -367,7 +367,7 @@ export const articles: Article[] = [
 
   {
     slug: "byd-e3-platform",
-    image: "/images/vehicles/z9gt.png",
+    image: undefined,
     title:
       "The e³ Platform — Denza's Premium Architecture Explained",
     date: "2026-03-12",
