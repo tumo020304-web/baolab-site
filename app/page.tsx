@@ -196,32 +196,32 @@ export default function Home() {
         {/* PILLARS */}
         <section id="pillars" className="section container">
           <div className="pillar-grid">
-            <div className="pillar-card">
+            <a href="https://shop.baolab.au" className="pillar-card">
               <img src="/images/premium.jpg" alt="Premium accessories" />
               <h3>Premium Accessories</h3>
               <p>
                 High-quality upgrades that improve daily comfort and interior
                 finish.
               </p>
-            </div>
+            </a>
 
-            <div className="pillar-card">
+            <a href="https://shop.baolab.au/collections/travel-and-camping" className="pillar-card">
               <img src="/images/camping.jpg" alt="Travel and camping" />
               <h3>Travel &amp; Camping</h3>
               <p>
                 Roof platforms, storage solutions and gear built for road trips
                 and outdoor use.
               </p>
-            </div>
+            </a>
 
-            <div className="pillar-card">
+            <a href="https://shop.baolab.au/collections/retrofits" className="pillar-card">
               <img src="/images/retrofit.jpg" alt="Advanced retrofits" />
               <h3>Retrofits</h3>
               <p>
                 Bring back selected China-spec features such as dashcams and
                 internal V2L.
               </p>
-            </div>
+            </a>
           </div>
         </section>
 
