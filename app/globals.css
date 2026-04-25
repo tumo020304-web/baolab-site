@@ -1011,6 +1011,17 @@ NEWS — ARTICLE
   color: var(--muted);
 }
 
+.article-body img,
+.article-body .article-img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 28px 0;
+  display: block;
+}
+
 /* Related articles */
 .article-related {
   margin-top: 64px;

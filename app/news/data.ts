@@ -276,7 +276,7 @@ export const articles: Article[] = [
 <p>This is where the N7 separates itself. The Sealion 7 runs a capable double-wishbone front and multi-link rear setup. The N7 takes it further:</p>
 <ul>
 <li><strong>Double-wishbone front, five-link rear</strong> — standard</li>
-<li><strong>Yunnian-A air suspension with CDC damping</strong> — adjustable height and stiffness</li>
+<li><strong>DiSus-A air suspension with CDC damping</strong> — adjustable height and stiffness</li>
 <li><strong>Rear-wheel steering</strong> — 5.7-metre turning circle for a car this size</li>
 <li><strong>e-Platform 3.0 with 800V architecture</strong> — faster charging, better thermal management</li>
 </ul>
@@ -301,7 +301,7 @@ export const articles: Article[] = [
 
 <img src="/images/articles/n7/17.3中控.jpeg" alt="Denza N7 17.3-inch center console" class="article-img" />
 
-<p>Five screens. In a car that costs under $60,000.</p>
+<p>Five screens. At this price point, that's remarkable.</p>
 
 <p>The seats are wrapped in Nappa leather with ventilation, heating, and massage. The front passenger gets a "Queen's Seat" with a leg rest and eight-point massage.</p>
 
