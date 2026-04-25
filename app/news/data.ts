@@ -229,6 +229,102 @@ export const articles: Article[] = [
 `,
   },
   {
+    slug: "denza-n7-premium-suv",
+    image: "/images/vehicles/n7.png",
+    title:
+      "The Denza N7 — Australia's Missing Premium Electric SUV",
+    date: "2026-04-25",
+    category: "Analysis",
+    excerpt:
+      "Denza has confirmed five vehicles for Australia in 2026. Four are locked in. We think the fifth is the N7 — a mid-size electric SUV with air suspension, rear-wheel steering, and a five-screen interior that undercuts the Europeans by tens of thousands.",
+    related: [
+      { slug: "denza-b5-b8-launch", title: "Denza B5 & B8: The Brand Arrives in Australia" },
+      { slug: "z9gt-melbourne-debut", title: "Denza Z9 GT Confirmed for Australia" },
+    ],
+    content: `
+<p>Denza Australia has confirmed five vehicles for 2026. Four are already locked in: the B5, B8, D9, and Z9 GT. The fifth remains unannounced — no teasers, no confirmations, no hints from the brand.</p>
+
+<p>We think it's the N7. And if we're right, it's the most important car Denza will bring to Australia this year.</p>
+
+<h2>What is the N7?</h2>
+<p>The Denza N7 is a full-electric "shooting brake" SUV — think of it as the premium, more athletic sibling to the BYD Sealion 7. Where the Sealion 7 offers excellent value in the mid-size EV SUV segment, the N7 takes the same fundamental platform and elevates everything: the chassis, the interior, the technology, the driving experience.</p>
+
+<p>In China, the N7 sits in the 239,800–289,800 RMB range (roughly AUD $50,000–$60,000), positioning it squarely against the Tesla Model Y Performance, Hyundai Ioniq 5, and Kia EV6 GT.</p>
+
+<h2>The Specs</h2>
+<p>Built on BYD's e-Platform 3.0, the N7 packs serious numbers:</p>
+
+<table>
+<tr><th>Spec</th><th>Rear-Drive</th><th>AWD Performance</th></tr>
+<tr><td>Power</td><td>230kW / 360Nm</td><td>390kW / 670Nm</td></tr>
+<tr><td>0–100 km/h</td><td>6.8 seconds</td><td>3.9 seconds</td></tr>
+<tr><td>Range (CLTC)</td><td>702 km</td><td>630 km</td></tr>
+<tr><td>Battery</td><td>91.3 kWh Blade Battery</td><td>91.3 kWh Blade Battery</td></tr>
+<tr><td>Ultra-Fast Charging</td><td>230kW dual-gun, 15 min = ~350 km</td><td>Same</td></tr>
+<tr><td>Dimensions</td><td colspan="2">4860 × 1935 × 1625mm, wheelbase 2940mm</td></tr>
+<tr><td>Boot</td><td colspan="2">480L (1200L seats down)</td></tr>
+<tr><td>Drag coefficient</td><td colspan="2">0.24 Cd</td></tr>
+</table>
+
+<p>The AWD version hits 100 km/h in 3.9 seconds. That's not "good for an EV" — that's genuinely fast by any standard.</p>
+
+<h2>Chassis — Where It Beats the Sealion 7</h2>
+<p>This is where the N7 separates itself. The Sealion 7 runs a capable double-wishbone front and multi-link rear setup. The N7 takes it further:</p>
+<ul>
+<li><strong>Double-wishbone front, five-link rear</strong> — standard</li>
+<li><strong>Yunnian-A air suspension with CDC damping</strong> — adjustable height and stiffness</li>
+<li><strong>Rear-wheel steering</strong> — 5.7-metre turning circle for a car this size</li>
+<li><strong>e-Platform 3.0 with 800V architecture</strong> — faster charging, better thermal management</li>
+</ul>
+
+<p>The Sealion 7 doesn't get air suspension. The N7 does. That's the difference between "comfortable" and "luxury ride quality."</p>
+
+<h2>Interior — Five Screens</h2>
+<p>The N7's cabin is where the premium positioning really shows:</p>
+<ul>
+<li><strong>10.25-inch instrument cluster</strong></li>
+<li><strong>17.3-inch 2K central display</strong></li>
+<li><strong>10.25-inch passenger screen</strong></li>
+<li><strong>50-inch AR head-up display</strong></li>
+<li><strong>7-inch armrest control screen</strong></li>
+</ul>
+
+<p>Five screens. In a car that costs under $60,000.</p>
+
+<p>The seats are wrapped in Nappa leather with ventilation, heating, and massage. The front passenger gets a "Queen's Seat" with a leg rest and eight-point massage. The roof is Alcantara. The sound system is a 16-speaker Devialet setup with Dolby Atmos. Even the gear selector is crystal.</p>
+
+<h2>Autonomous Driving</h2>
+<p>The N7 runs dual LiDAR sensors and 33 total sensors, powering BYD's DiPilot 300 system. It supports city and highway navigation on autopilot across 200+ cities in China, plus automated valet parking and smart obstacle avoidance.</p>
+
+<p>The Sealion 7, by comparison, runs a single LiDAR on its top-spec model with DiPilot 200 — highway-focused, less capable in city driving.</p>
+
+<h2>N7 vs Sealion 7 — Quick Comparison</h2>
+<table>
+<tr><th>Feature</th><th>Denza N7</th><th>BYD Sealion 7</th></tr>
+<tr><td>Positioning</td><td>Premium / luxury</td><td>Mainstream / value</td></tr>
+<tr><td>Suspension</td><td>Air + CDC</td><td>FSD / DiSus-C</td></tr>
+<tr><td>Rear-wheel steering</td><td>Yes (5.7m turning circle)</td><td>No</td></tr>
+<tr><td>Max range (CLTC)</td><td>702 km</td><td>610 km</td></tr>
+<tr><td>0–100 km/h (AWD)</td><td>3.9s</td><td>5.9s</td></tr>
+<tr><td>Interior screens</td><td>5</td><td>2</td></tr>
+<tr><td>Audio</td><td>Devialet 16-speaker</td><td>Dynaudio 12-speaker</td></tr>
+<tr><td>LiDAR</td><td>Dual</td><td>Single (top spec)</td></tr>
+<tr><td>Price (China)</td><td>239,800–289,800 RMB</td><td>189,800–239,800 RMB</td></tr>
+</table>
+
+<h2>Why Australia Needs This Car</h2>
+<p>The mid-size premium EV SUV segment in Australia is competitive but thin on genuine value. The Tesla Model Y dominates on brand recognition. The Hyundai Ioniq 5 wins on design. The Kia EV6 impresses on driving dynamics.</p>
+
+<p>The N7 doesn't try to beat any of them at their own game. It plays a different game entirely — offering air suspension, rear-wheel steering, a five-screen interior, and 702 km of range at a price point that undercuts the Europeans by tens of thousands of dollars.</p>
+
+<p>If Denza brings the N7 to Australia, it won't just fill a gap in their lineup. It'll challenge the entire segment to raise its game.</p>
+
+<p>We're ready for it. When the N7 arrives, Baolab will have accessories designed to match its premium character.</p>
+
+<p>Watch this space.</p>
+`,
+  },
+  {
     slug: "denza-d9-electric-mpv",
     image: "/denza-d9-hero.jpg",
     title:
